@@ -76,7 +76,7 @@ ember.create_vectorized_features("/data/ember2018/")
 ember.create_metadata("/data/ember2018/")
 ```
 
-파일 생성되면, 다음과 같은 편리한 함수를 통해 데이터를 읽을 수 있습니다:
+파일 생성 후, 다음과 같은 편리한 함수를 통해 데이터를 읽을 수 있습니다:
 
 ```
 import ember

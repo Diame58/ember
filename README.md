@@ -105,7 +105,6 @@ print(ember.predict_sample(lgbm_model, putty_data))
 ## 인용
 
 만약 당신이 이 오픈소스(데이터)를 사용하면 이 사이트[(paper)](https://arxiv.org/abs/1804.04637)를 참고바랍니다:
-If you use this data in a publication please cite the following :
 
 ```
 H. Anderson and P. Roth, "EMBER: An Open Dataset for Training Static PE Malware Machine Learning Models”, in ArXiv e-prints. Apr. 2018.

@@ -18,7 +18,7 @@ feature calculation version 입니다. Feature version 1 은 LIEF library versio
 
 ## 다운로드
 
-여기서 데이터를 다운로드 하세요:
+여기서 데이터를 다운로드 하십시오:
 
 | Year | Feature Version | Filename                     | URL                                                                                                                              | sha256                                                             |
 |------|-----------------|------------------------------|----------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
@@ -28,18 +28,18 @@ feature calculation version 입니다. Feature version 1 은 LIEF library versio
 
 
 ## 설치
-### Instrall directly from git
-Use `pip` to install the `ember` and required files
+### git 사용 (다이렉트 설치)
+
+`pip` 명령어를 사용해 `ember`(필요한 기능) 설치하십시오.
 
 ```
 pip install git+https://github.com/endgameinc/ember.git
 ```
 
-This provides access to EMBER feature extaction for example.  However, to use the scripts to train the model, one would instead clone the repository.
+EMBER feature 추출 기능을 사용하려면, 저장소 복제 후 train model scripts 사용바랍니다.
 
-
-### Install after cloning the EMBER repository
-Use `pip` or `conda` to install the required packages before installing `ember` itself:
+### EMBER 저장소 복제 후 설치하기
+`pip` 또는 `conda` 명령어를 통해 `ember`(필요한 기능) 설치하십시오.
 
 ```
 pip install -r requirements.txt
@@ -54,21 +54,21 @@ python setup.py install
 
 ## Scripts
 
-The `train_ember.py` script simplifies the model training process. It will vectorize the ember features if necessary and then train the LightGBM model.
+`train_ember.py`는 간단한 모델 트레이닝 스크립트입니다. ember features 벡터화 후 LightGBM 모델 학습 가능(train)합니다.
 
 ```
 python train_ember.py [/path/to/dataset]
 ```
 
-The `classify_binaries.py` script will return model predictions on PE files.
+`classify_binaries.py` 는 PE파일 정확도를 반환해주는 스크립트입니다.
 
 ```
 python classify_binaries.py -m [/path/to/model] BINARIES
 ```
 
-## Import Usage
+## 내보내기
 
-The raw feature data can be expanded into vectorized form on disk for model training and into metadata form. These two functions create those extra files:
+raw 데이터(feature)는 모델 트레이닝을 위해 벡터화된 내용을 metadata 형식으로 확장(저장)할 수 있습니다. 2가지 함수는 다음처럼 추가 파일을 생성합니다:
 
 ```
 import ember
@@ -76,7 +76,7 @@ ember.create_vectorized_features("/data/ember2018/")
 ember.create_metadata("/data/ember2018/")
 ```
 
-Once created, that data can be read in using convenience functions:
+파일 생성되면, 다음과 같은 편리한 함수를 통해 데이터를 읽을 수 있습니다:
 
 ```
 import ember
@@ -84,7 +84,7 @@ X_train, y_train, X_test, y_test = ember.read_vectorized_features("/data/ember20
 metadata_dataframe = ember.read_metadata("/data/ember2018/")
 ```
 
-Once the data is downloaded and the ember module is installed, this simple code should reproduce the benchmark ember model:
+ember 모듈 설치 및 데이터 다운 후, 다음과 같이 간단한 벤치마크 ember model 재현 가능합니다:
 
 ```
 import ember
@@ -92,7 +92,7 @@ ember.create_vectorized_features("/data/ember2018/")
 lgbm_model = ember.train_model("/data/ember2018/")
 ```
 
-Once the model is trained, the ember module can be used to make a prediction on any input PE file:
+모델 학습이 끝나면, ember 모듈은 PE파일 정확도(악성코드)를 예측(탐지)할 수 있습니다:
 
 ```
 import ember
@@ -102,9 +102,10 @@ putty_data = open("~/putty.exe", "rb").read()
 print(ember.predict_sample(lgbm_model, putty_data))
 ```
 
-## Citing
+## 인용
 
-If you use this data in a publication please cite the following [paper](https://arxiv.org/abs/1804.04637):
+만약 당신이 이 오픈소스(데이터)를 사용하면 이 사이트[(paper)](https://arxiv.org/abs/1804.04637)를 참고바랍니다:
+If you use this data in a publication please cite the following :
 
 ```
 H. Anderson and P. Roth, "EMBER: An Open Dataset for Training Static PE Malware Machine Learning Models”, in ArXiv e-prints. Apr. 2018.

@@ -2,7 +2,7 @@
 
 # Endgame Malware BEnchmark for Research
 
-EMBER 데이터셋은 PE파일(features) 모음으로 악성코드 연구자를 위해 벤치마크 데이터셋을 제공합니다. EMBER2017 데이터셋은 2017년까지 스캔된 110만개 PE 파일(features)이며, EMBER2018 데이터셋은 2018년까지 1백만개 PE파일(features)입니다. 이 저장소를 통해 벤치마크 모델을 쉽게 재현하고, 제공된 데이터셋을 확장해 벤치마크 모델을 새롭게 PE 파일(Hwp, Pdf, Jpg 등)로 분류할 수 있습니다.
+EMBER 데이터셋은 PE파일(features) 모음으로 악성코드 연구자를 위해 벤치마크 데이터셋을 제공합니다. EMBER2017 데이터셋은 2017년까지 스캔된 110만개 PE 파일(features)이며, EMBER2018 데이터셋은 2018년까지 1백만개 PE파일(features)입니다. 이 저장소를 통해 벤치마크 모델을 쉽게 재현하고, 제공된 데이터셋을 확장해 벤치마크 모델을 새롭게 PE 파일(hwp, pdf, jpg 등)로 분류할 수 있습니다.
 
 이 링크는 데이터셋 관련 자세한 논문입니다: [https://arxiv.org/abs/1804.04637](https://arxiv.org/abs/1804.04637)
 

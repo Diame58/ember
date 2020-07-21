@@ -6,19 +6,19 @@ EMBER 데이터셋은 PE 파일 모음으로 연구원을 위해 벤치마크 �
 
 이 링크는 데이터셋 관련 자세한 논문입니다: [https://arxiv.org/abs/1804.04637](https://arxiv.org/abs/1804.04637)
 
-## Features
+## 기능
 
 The [LIEF](https://lief.quarkslab.com/) project is used to extract features from PE files included in the EMBER dataset. Raw features are extracted to JSON format and included in the publicly available dataset. Vectorized features can be produced from these raw features and saved in binary format from which they can be converted to CSV, dataframe, or any other format. This repository makes it easy to generate raw features and/or vectorized features from any PE file. Researchers can implement their own features, or even vectorize the existing features differently from the existing implementations.
 
 The feature calculation is versioned. Feature version 1 is calculated with the LIEF library version 0.8.3. Feature version 2 includes the additional data directory feature, updated ordinal import processing, and is calculated with LIEF library version 0.9.0.  We have verified under Windows and Linux that LIEF provides consistent feature representation for version 2 features using LIEF version 0.10.1.
 
-## Years
+## 년도별 데이터셋
 
 The first EMBER dataset consisted of version 1 features calculated over samples collected in or before 2017. The second EMBER dataset release consisted of version 2 features calculated over samples collected in or before 2018. In conjunction with the second release, we also included the version 2 features from the samples collected in 2017. Combining the data from 2017 and 2018 will allow longer longitudinal studies of the evolution of features and PE file types. But different selection criteria were applied when choosing samples from 2017 and 2018. Specifically, the samples from 2018 were chosen so that the resultant training and test sets would be harder for machine learning algorithms to classify. Please beware of this inconsistancy while constructing your multi-year studies.
 
-## Download
+## 다운로드
 
-Download the data here:
+여기서 데이터를 다운로드 하세요:
 
 | Year | Feature Version | Filename                     | URL                                                                                                                              | sha256                                                             |
 |------|-----------------|------------------------------|----------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
@@ -27,7 +27,7 @@ Download the data here:
 | 2018 | 2               | ember_dataset_2018_2.tar.bz2 | [https://pubdata.endgame.com/ember/ember_dataset_2018_2.tar.bz2](https://pubdata.endgame.com/ember/ember_dataset_2018_2.tar.bz2) | `b6052eb8d350a49a8d5a5396fbe7d16cf42848b86ff969b77464434cf2997812` |
 
 
-## Installation
+## 설치
 ### Instrall directly from git
 Use `pip` to install the `ember` and required files
 

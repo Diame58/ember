@@ -2,17 +2,17 @@
 
 # Endgame Malware BEnchmark for Research
 
-EMBER 데이터셋은 PE 파일 모음으로 연구자를 위해 벤치마크 데이터셋을 제공합니다. EMBER2017 데이터셋은 2017년까지 스캔된 110만개 PE 파일을 포함하고, EMBER2018 데이터셋은 2018년까지 1백만개 PE파일을 포함하고 있습니다. 이 저장소를 통해 벤치마크 모델을 쉽게 재현하고, 제공된 데이터셋을 확장해 벤치마크 모델과 함께 새로운 PE 파일(Hwp, Pdf, Jpg 등)을 분류할 수 있습니다.
+EMBER 데이터셋은 PE파일(features) 모음으로 악성코드 연구자를 위해 벤치마크 데이터셋을 제공합니다. EMBER2017 데이터셋은 2017년까지 스캔된 110만개 PE 파일(features)이며, EMBER2018 데이터셋은 2018년까지 1백만개 PE파일(features)입니다. 이 저장소를 통해 벤치마크 모델을 쉽게 재현하고, 제공된 데이터셋을 확장해 벤치마크 모델을 새롭게 PE 파일(Hwp, Pdf, Jpg 등)로 분류할 수 있습니다.
 
 이 링크는 데이터셋 관련 자세한 논문입니다: [https://arxiv.org/abs/1804.04637](https://arxiv.org/abs/1804.04637)
 
 ## 기능
 
-The [LIEF](https://lief.quarkslab.com/) project is used to extract features from PE files included in the EMBER dataset. Raw features are extracted to JSON format and included in the publicly available dataset. Vectorized features can be produced from these raw features and saved in binary format from which they can be converted to CSV, dataframe, or any other format. This repository makes it easy to generate raw features and/or vectorized features from any PE file. Researchers can implement their own features, or even vectorize the existing features differently from the existing implementations.
+[LIEF](https://lief.quarkslab.com/) 프로젝트는 EMBER 데이터셋 PE파일(features)을 추출하는데 사용됩니다. LIEF 프로젝트는 EMBER 데이터셋 PE파일 features 을 추출하는데 사용됩니다. Raw 파일(features)은 JSON 포맷으로 추출된다. 그리고 공개적으로 이용 가능한 데이터셋으로 포함됩니다. Vectorized features can be produced from these raw features and saved in binary format from which they can be converted to CSV, dataframe, or any other format. This repository makes it easy to generate raw features and/or vectorized features from any PE file. Researchers can implement their own features, or even vectorize the existing features differently from the existing implementations.
 
 The feature calculation is versioned. Feature version 1 is calculated with the LIEF library version 0.8.3. Feature version 2 includes the additional data directory feature, updated ordinal import processing, and is calculated with LIEF library version 0.9.0.  We have verified under Windows and Linux that LIEF provides consistent feature representation for version 2 features using LIEF version 0.10.1.
 
-## 년도별 데이터셋
+## 년도별
 
 The first EMBER dataset consisted of version 1 features calculated over samples collected in or before 2017. The second EMBER dataset release consisted of version 2 features calculated over samples collected in or before 2018. In conjunction with the second release, we also included the version 2 features from the samples collected in 2017. Combining the data from 2017 and 2018 will allow longer longitudinal studies of the evolution of features and PE file types. But different selection criteria were applied when choosing samples from 2017 and 2018. Specifically, the samples from 2018 were chosen so that the resultant training and test sets would be harder for machine learning algorithms to classify. Please beware of this inconsistancy while constructing your multi-year studies.
 

@@ -54,7 +54,7 @@ python setup.py install
 
 ## Scripts
 
-`train_ember.py`는 간단한 모델 트레이닝 스크립트입니다. ember features 벡터화 후 LightGBM 모델 학습 가능(train)합니다.
+`train_ember.py`는 간단한 모델 트레이닝 스크립트입니다. ember features 벡터화 후 LightGBM 모델 학습 가능합니다.
 
 ```
 python train_ember.py [/path/to/dataset]

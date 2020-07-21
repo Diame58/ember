@@ -14,7 +14,7 @@ feature calculation version 입니다. Feature version 1 은 LIEF library versio
 
 ## 년도별
 
-첫 번째, EMBER 데이터셋은 2017년까지 수집된 샘플을 계산해 version 1 features 구성했습니다.  두 번째, EMBER 데이터셋은 2018년까지 수집된 샘플을 계산해 version 1 features 구성했습니다. EMBER2017 version 2 는 EMBER2017 version 1 까지 포함했습니다. 2017년부터 2018년까지 데이터를 조합해 사용하면 PE파일(features)의 장기적인 유형 진화에 대해 연구 가능합니다. 하지만, 2017년과 2018년 샘플을 선택할 때 기준을 잘 확인해야 합니다. 특히, 2018년 샘플을 선택하면 머신러닝 알고리즘으로 test sets, resultant training 하기 어려워집니다. 이 부분은 몇 년간 연구했지만 양해바라며 유의바랍니다.
+첫 번째, EMBER 데이터셋은 2017년까지 수집된 샘플을 계산해 version 1 features 구성했습니다.  두 번째, EMBER 데이터셋은 2018년까지 수집된 샘플을 계산해 version 1 features 구성했습니다. EMBER2017 version 2 는 EMBER2017 version 1 까지 포함했습니다. 2017년부터 2018년까지 데이터를 조합해 사용하면 PE파일(features)의 장기적인 유형 진화에 대해 연구 가능합니다. 하지만, 2017년과 2018년 샘플을 선택할 때 기준을 잘 확인해야 합니다. 특히, 2018년 샘플을 선택하면 머신러닝 알고리즘으로 test sets, resultant training 하기 어려워집니다. 이 부분은 몇 년간 연구했지만 해결하지 못했습니다. 양해 부탁드리고 꼭 유의바랍니다.
 
 ## 다운로드
 

@@ -10,7 +10,7 @@ EMBER 데이터셋은 PE파일(features) 모음으로 악성코드 연구자를 
 
 [LIEF](https://lief.quarkslab.com/) 프로젝트는 EMBER 데이터셋 PE파일(features)을 추출하는데 사용됩니다. LIEF 프로젝트는 EMBER 데이터셋 PE파일 features 을 추출하는데 사용됩니다. Raw 파일(features)은 JSON 포맷으로 추출된다. 그리고 공개적으로 이용 가능한 데이터셋으로 포함됩니다. Vectorized(features)은 Raw(features)으로부터 생성됩니다. CSV, dataframe 등은 바이너리 포맷으로 저장됩니다. 이 저장소를 사용하면 PE파일을 Raw(features)와 Vectorized(features)로 쉽게 생성할 수 있습니다. 연구자는 자체 기능을 구현하거나 기존 기능과 다르게 벡터화 할 수 있습니다.
 
-feature calculation version 입니다. Feature version 1 은 LIEF library version 0.8.3 으로 계산됩니다. Feature version 2 는 additional data directory feature, updated ordinal import processing 포함되고 LIEF library version 0.9.0 으로 계산됩니다. 우리는 윈도우/리눅스에서 LIEF version 0.10.1 을 사용해서 두 환경 모두 Feature version 2 작동됨을 확인했습니다.
+feature calculation version 입니다. Feature version 1 은 LIEF library version 0.8.3 으로 계산됩니다. Feature version 2 는 additional data directory feature, updated ordinal import processing 포함되고 LIEF library version 0.9.0 으로 계산됩니다. 윈도우/리눅스에서 LIEF version 0.10.1 으로 두 환경 모두 Feature version 2 작동됨을 확인했습니다.
 
 ## 년도별
 
